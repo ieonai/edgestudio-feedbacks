@@ -1,0 +1,45 @@
+name: "🐛 Report a Bug"
+description: "Something isn't working as expected"
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "### Thanks for helping EdgeStudio.ai get better! Please fill in the details below."
+  - type: input
+    id: version
+    attributes:
+      label: "EdgeStudio.ai Version/Dashboard Link"
+      description: "Where were you in the app when this happened?"
+      placeholder: "e.g., https://edgestudio.ai/projects/..."
+  - type: textarea
+    id: description
+    attributes:
+      label: "What happened?"
+      description: "Describe the bug clearly."
+      placeholder: "I clicked the button, but nothing happened..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "How can we reproduce it?"
+      description: "List the steps to see the bug."
+      placeholder: "1. Logged in\n2. Clicked on 'New Dataset'\n3. Error appeared..."
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "How severe is this?"
+      options:
+        - "Minor: Cosmetic or small glitch"
+        - "Major: Blocking my work"
+        - "Critical: System is broken/crash"
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Screenshots (Optional)"
+      description: "Drag and drop your screenshots here!"
