@@ -1,0 +1,68 @@
+name: "✨ Request a Feature"
+description: "Suggest a new feature or improvement for EdgeStudio.ai"
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: "### Thanks for helping EdgeStudio.ai grow! Tell us what you'd like to see."
+  - type: input
+    id: area
+    attributes:
+      label: "Area of the App"
+      description: "Which part of EdgeStudio.ai does this relate to?"
+      placeholder: "e.g., Datasets, Dashboard, Exports, Billing..."
+  - type: textarea
+    id: problem
+    attributes:
+      label: "What problem are you trying to solve?"
+      description: "Describe the pain point or gap you're running into today."
+      placeholder: "Every time I export a dataset, I have to manually rename each file..."
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: "What would you like to happen?"
+      description: "Describe the feature or change you have in mind."
+      placeholder: "A 'naming pattern' option in the export dialog..."
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives you've considered (Optional)"
+      description: "Any workarounds or other approaches you've tried."
+      placeholder: "I currently use a script to rename files afterwards..."
+  - type: dropdown
+    id: impact
+    attributes:
+      label: "How important is this to you?"
+      options:
+        - "Nice to have: Would be a small improvement"
+        - "Important: Would save me significant time"
+        - "Critical: I can't use EdgeStudio.ai properly without it"
+    validations:
+      required: true
+  - type: dropdown
+    id: users
+    attributes:
+      label: "Who would benefit?"
+      options:
+        - "Just me / my workflow"
+        - "My team"
+        - "Most EdgeStudio.ai users"
+    validations:
+      required: true
+  - type: textarea
+    id: mockups
+    attributes:
+      label: "Mockups or Examples (Optional)"
+      description: "Drag and drop sketches, screenshots, or links to similar features elsewhere!"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "Before submitting"
+      options:
+        - label: "I searched existing issues and this hasn't been requested yet"
+          required: true
